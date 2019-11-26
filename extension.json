@@ -1,0 +1,18 @@
+{
+  "id": "migrate-contentful",
+  "name": "Migrate staging content to production",
+  "srcdoc": "./index.html",
+  "fieldTypes": ["Symbol"],
+  "sidebar": true,
+  "parameters": {
+    "instance": [
+      {
+        "id": "circleCIMigrateHookURL",
+        "type": "Symbol",
+        "name": "Circle CI Migrate Hook URL",
+        "description": "The Circle CI Migrate Hook URL that will be triggered once the user clicks on the migrate button.",
+        "required": true
+      }
+    ]
+  }
+}
