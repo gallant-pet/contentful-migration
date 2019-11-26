@@ -29,10 +29,12 @@
   <script>
     function showExtension(extension) {
       document.getElementById('root').style.display = 'block';
-      var circleCIMigrateHookURL = extension.parameters.instance.circleCIMigrateHookURL;
+      var circleCIMigrateHookURL = 'https://circleci.com/api/v1.1/project/github/gallant-pet/gallant-homepage/tree/master';
       function triggerMerge() {
         return window.fetch(circleCIMigrateHookURL, {
-          method: 'POST'
+          method: 'POST',
+          body: {branch: 'master'},
+          headers: new Headers({'Authorization': 'Basic '})
         });
       }
       var interval = null;
